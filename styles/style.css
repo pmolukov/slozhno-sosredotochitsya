@@ -2,4 +2,9 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--main-font, monospace);
+}
+
+.header {
+  padding: 10px;
 }
