@@ -16,7 +16,8 @@
 .header {
   padding: 10px;
   display: grid;
-  grid-template-rows: repeat(3, minmax(calc(100vh / 3), 1fr));
+  min-height: 100vh;
+  grid-template-rows: repeat(3, 1fr);
   position: relative;
   margin-block-end: 40px;
 }
@@ -88,7 +89,6 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
   line-height: 82.5%;
-  align-self: center;
 }
 
 .subtitle {
@@ -129,4 +129,50 @@
 .content__text-block-title .decorated {
   font-weight: bold;
   margin-block-end: 20px;
+}
+
+.gallery {
+  margin-block-end: 40px;
+}
+
+.gallery__grid {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery__image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-end: 1px solid var(--accent-color, #FF0070);
+  border-block-start: 1px solid var(--accent-color, #FF0070);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-start: 1px solid var(--accent-color, #FF0070);
+  border-block-end: 1px solid var(--accent-color, #FF0070);
 }
