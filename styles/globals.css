@@ -47,3 +47,20 @@ button {
   border: none;
   background-color: transparent;
 }
+
+a {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--accent-color, #FF0070);
+}
+
+a:hover {
+  border-block-end: 1px solid var(--text-color, #F1B2CE);
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 1px solid var(--text-color, #F1B2CE);
+}
