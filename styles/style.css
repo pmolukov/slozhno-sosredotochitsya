@@ -30,8 +30,8 @@
   inset-inline-end: 10px;
   block-size: 25px;
   inline-size: 25px;
-  border-inline-end: 1px solid var(--accent-color, #FF0070);
-  border-block-start: 1px solid var(--accent-color, #FF0070);
+  border-inline-end: 1px solid var(--decorative-color, #FF0070);
+  border-block-start: 1px solid var(--decorative-color, #FF0070);
 }
 
 .decorated-zone::after {
@@ -41,15 +41,15 @@
   inset-inline-start: 10px;
   block-size: 25px;
   inline-size: 25px;
-  border-inline-start: 1px solid var(--accent-color, #FF0070);
-  border-block-end: 1px solid var(--accent-color, #FF0070);
+  border-inline-start: 1px solid var(--decorative-color, #FF0070);
+  border-block-end: 1px solid var(--decorative-color, #FF0070);
 }
 
 .header__decorative-element {
   position: absolute;
   inset-inline-end: 12px;
   inset-block-start: 10px;
-  color: var(--accent-color, #FF0070);
+  color: var(--decorative-color, #FF0070);
   line-height: 138.889%;
   display: flex;
 }
@@ -66,7 +66,7 @@
 
 .header__theme-menu {
   justify-self: end;
-  color: var(--accent-color, #FF0070);
+  color: var(--decorative-color, #FF0070);
   text-align: center;
 }
 
@@ -82,13 +82,13 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color, #FF0070);
+  border: 1px solid var(--decorative-color, #FF0070);
   pointer-events: none;
 }
 
 .header__title {
   color: var(--title-color, #DB00FF);
-  text-shadow: 4px 4px 0px var(--accent-color, #FF0070);
+  text-shadow: 4px 4px 0px var(--title-shadow, #FF0070);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
   line-height: 82.5%;
@@ -122,9 +122,6 @@
 
 .content__text-block-title {
   font-size: inherit;
-  font-weight: bold;
-  color: var(--bg-color, #000028);
-  background-color: var(--accent-color, #FF0070);
   margin-block-end: 10px;
 }
 
@@ -207,6 +204,14 @@
   border-block-end: 1px solid var(--accent-color, #FF0070);
 }
 
+.footer__title {
+  color: var(--title-color, #DB00FF);
+  text-shadow: 2px 2px 0px var(--title-shadow, #FF0070);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: bold;
+  line-height: 82.5%;
+}
+
 @media (width >= 768px) {
   .header {
     padding: 20px;
@@ -215,6 +220,7 @@
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: -20px;
   }
 
   .header__subtitle {
