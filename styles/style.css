@@ -16,6 +16,7 @@
 .header {
   padding: 10px;
   display: grid;
+  align-items: center;
   min-height: 100vh;
   grid-template-rows: repeat(3, 1fr);
   position: relative;
@@ -44,7 +45,7 @@
   border-block-end: 1px solid var(--accent-color, #FF0070);
 }
 
-.decorative-element {
+.header__decorative-element {
   position: absolute;
   inset-inline-end: 12px;
   inset-block-start: 10px;
@@ -53,7 +54,7 @@
   display: flex;
 }
 
-.decorative-element::after {
+.header__decorative-element::after {
   content: '';
   display: inline-block;
   block-size: 25px;
@@ -65,7 +66,6 @@
 
 .header__theme-menu {
   justify-self: end;
-  align-self: center;
   color: var(--accent-color, #FF0070);
   text-align: center;
 }
@@ -78,6 +78,7 @@
 
 .header__theme-menu-button {
   padding: 0 0.72em;
+  border: 1px solid transparent;
 }
 
 .header__theme-menu-button_active {
@@ -85,7 +86,7 @@
   pointer-events: none;
 }
 
-.title {
+.header__title {
   color: var(--title-color, #DB00FF);
   text-shadow: 4px 4px 0px var(--accent-color, #FF0070);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -93,9 +94,8 @@
   line-height: 82.5%;
 }
 
-.subtitle {
+.header__subtitle {
   max-width: 100%;
-  align-self: center;
 }
 
 .title-decor {
@@ -213,11 +213,11 @@
     margin-block-end: 60px;
   }
 
-  .title {
+  .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .subtitle {
+  .header__subtitle {
     max-width: 50%;
     justify-self: flex-end;
   }

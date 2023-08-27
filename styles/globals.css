@@ -48,6 +48,18 @@ button {
   background-color: transparent;
 }
 
+button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  border-block-end: 1px solid var(--accent-color, #F1B2CE);
+}
+
 a {
   text-decoration: none;
   text-shadow: 2px 2px 0px var(--accent-color, #FF0070);
