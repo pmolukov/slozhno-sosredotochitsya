@@ -70,12 +70,14 @@
   text-align: center;
 }
 
-.header__theme-menu-button {
-  padding: 0 0.72em;
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
 }
 
-.header__theme-menu-item:not(:last-child) {
-  margin-block-end: 0.72em;
+.header__theme-menu-button {
+  padding: 0 0.72em;
 }
 
 .header__theme-menu-button_active {
@@ -126,8 +128,15 @@
   margin-block-end: 10px;
 }
 
-.content__text-block-title .decorated {
-  font-weight: bold;
+.decorated {
+  margin-block-end: 20px;
+}
+
+.unbold {
+  font-weight: normal;
+}
+
+.content__text-block:not(:last-child) {
   margin-block-end: 20px;
 }
 
@@ -136,8 +145,29 @@
 }
 
 .gallery__grid {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+}
+
+.sunset {
+  grid-area: sunset;
+}
+
+.ice-cream {
+  grid-area: ice-cream;
+}
+
+.tape {
+  grid-area: tape;
+}
+
+.books {
+  grid-area: books;
+}
+
+.street {
+  grid-area: street;
 }
 
 .gallery__image {
@@ -175,4 +205,64 @@
   inline-size: 25px;
   border-inline-start: 1px solid var(--accent-color, #FF0070);
   border-block-end: 1px solid var(--accent-color, #FF0070);
+}
+
+@media (width >= 768px) {
+  .header {
+    padding: 20px;
+    margin-block-end: 60px;
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .subtitle {
+    max-width: 50%;
+    justify-self: flex-end;
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .content__section {
+    margin-block-end: 80px;
+  }
+
+  .content__section_column-two {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .gallery .content__text-block-title {
+    margin-block-end: 20px;
+  }
+
+  .gallery__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1.2fr 1.65fr;
+    grid-template-areas: 
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: flex-start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .content__section_column-three {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
