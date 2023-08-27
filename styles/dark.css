@@ -10,10 +10,10 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-color: #000028;
-  --text-color: #F1B2CE;
-  --accent-color: #FF0070;
-  --decorative-color: #FF0070;
-  --title-color: #DB00FF;
-  --title-shadow: #FF0070;
-  --main-font: 'IBM Plex mono';
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --decorative-color: #ff0070;
+  --title-color: #db00ff;
+  --title-shadow: #ff0070;
+  --main-font: "IBM Plex mono";
 }

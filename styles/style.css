@@ -5,7 +5,7 @@
   font-family: var(--main-font, monospace);
   font-size: 18px;
   line-height: 130%;
-  color: var(--text-color, #F1B2CE); 
+  color: var(--text-color, #f1b2ce);
   background-color: var(--bg-color, #000028);
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
@@ -24,38 +24,38 @@
 }
 
 .decorated-zone::before {
-  content: '';
+  content: "";
   position: absolute;
   inset-block-start: 10px;
   inset-inline-end: 10px;
   block-size: 25px;
   inline-size: 25px;
-  border-inline-end: 1px solid var(--decorative-color, #FF0070);
-  border-block-start: 1px solid var(--decorative-color, #FF0070);
+  border-inline-end: 1px solid var(--decorative-color, #ff0070);
+  border-block-start: 1px solid var(--decorative-color, #ff0070);
 }
 
 .decorated-zone::after {
-  content: '';
+  content: "";
   position: absolute;
   inset-block-end: 10px;
   inset-inline-start: 10px;
   block-size: 25px;
   inline-size: 25px;
-  border-inline-start: 1px solid var(--decorative-color, #FF0070);
-  border-block-end: 1px solid var(--decorative-color, #FF0070);
+  border-inline-start: 1px solid var(--decorative-color, #ff0070);
+  border-block-end: 1px solid var(--decorative-color, #ff0070);
 }
 
 .header__decorative-element {
   position: absolute;
   inset-inline-end: 12px;
   inset-block-start: 10px;
-  color: var(--decorative-color, #FF0070);
+  color: var(--decorative-color, #ff0070);
   line-height: 138.889%;
   display: flex;
 }
 
 .header__decorative-element::after {
-  content: '';
+  content: "";
   display: inline-block;
   block-size: 25px;
   inline-size: 25px;
@@ -66,7 +66,7 @@
 
 .header__theme-menu {
   justify-self: end;
-  color: var(--decorative-color, #FF0070);
+  color: var(--decorative-color, #ff0070);
   text-align: center;
 }
 
@@ -82,13 +82,13 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--decorative-color, #FF0070);
+  border: 1px solid var(--decorative-color, #ff0070);
   pointer-events: none;
 }
 
 .header__title {
-  color: var(--title-color, #DB00FF);
-  text-shadow: 4px 4px 0px var(--title-shadow, #FF0070);
+  color: var(--title-color, #db00ff);
+  text-shadow: 4px 4px 0px var(--title-shadow, #ff0070);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
   line-height: 82.5%;
@@ -99,7 +99,7 @@
 }
 
 .title-decor {
-  background-color: var(--accent-color, #FF0070);
+  background-color: var(--accent-color, #ff0070);
   color: var(--bg-color, #000028);
   font-weight: bold;
 }
@@ -110,14 +110,13 @@
 
 .content__section {
   margin-block-end: 50px;
-  display: grid;
-  gap: 20px;
 }
 
 .content__title {
-  color: var(--accent-color, #FF0070);
+  color: var(--accent-color, #ff0070);
   font-weight: bold;
   font-size: inherit;
+  margin-block-end: 20px;
 }
 
 .content__text-block-title {
@@ -183,30 +182,30 @@
 }
 
 .decorated-zone::before {
-  content: '';
+  content: "";
   position: absolute;
   inset-block-start: 10px;
   inset-inline-end: 10px;
   block-size: 25px;
   inline-size: 25px;
-  border-inline-end: 1px solid var(--accent-color, #FF0070);
-  border-block-start: 1px solid var(--accent-color, #FF0070);
+  border-inline-end: 1px solid var(--decorative-color, #ff0070);
+  border-block-start: 1px solid var(--decorative-color, #ff0070);
 }
 
 .decorated-zone::after {
-  content: '';
+  content: "";
   position: absolute;
   inset-block-end: 10px;
   inset-inline-start: 10px;
   block-size: 25px;
   inline-size: 25px;
-  border-inline-start: 1px solid var(--accent-color, #FF0070);
-  border-block-end: 1px solid var(--accent-color, #FF0070);
+  border-inline-start: 1px solid var(--decorative-color, #ff0070);
+  border-block-end: 1px solid var(--decorative-color, #ff0070);
 }
 
 .footer__title {
-  color: var(--title-color, #DB00FF);
-  text-shadow: 2px 2px 0px var(--title-shadow, #FF0070);
+  color: var(--title-color, #db00ff);
+  text-shadow: 2px 2px 0px var(--title-shadow, #ff0070);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
   line-height: 82.5%;
@@ -237,6 +236,8 @@
   }
 
   .content__section_column-two {
+    display: grid;
+    gap: 10px;
     grid-template-columns: 1fr 2fr;
   }
 
@@ -249,10 +250,29 @@
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1.2fr 1.65fr;
-    grid-template-areas: 
+    grid-template-areas:
       "sunset sunset ice-cream"
       "tape books ice-cream"
       "tape street street";
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+
+  .header__decorative-element {
+    inset-inline-end: 22px;
+    inset-block-start: 20px;
   }
 }
 
@@ -268,7 +288,8 @@
 
   .content__section_column-three {
     display: grid;
-    gap: 20px;
+    row-gap: 0;
+    column-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
   }
 }
