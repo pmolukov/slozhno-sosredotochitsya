@@ -15,5 +15,5 @@
   --decorative-color: #ff0070;
   --title-color: #db00ff;
   --title-shadow: #ff0070;
-  --main-font: "IBM Plex mono";
+  --bg-image: url(../images/cover-image-dark.png);
 }
